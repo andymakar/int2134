@@ -51,6 +51,7 @@ public class AnyDay {
             case 4 : System.out.println("Wednesday"); break;
             case 5 : System.out.println("Thursday"); break;
             case 6 : System.out.println("Friday"); break;
+			default: System.out.println("Invalid Day Calculation");
         }
      
         
