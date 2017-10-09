@@ -9,6 +9,7 @@ public class HelloClass {
     
     System.out.println("INT2134 Class Roster: ");
 	System.out.println("Dr. Andrew Makar - Adjunct Professor");
+   System.out.println("Peter Ebaugh - Student");
 
   }
 }
