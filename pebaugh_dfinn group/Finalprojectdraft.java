@@ -7,8 +7,18 @@
 */
 import java.util.*;
 import java.io.*;
-public class Finalproject2 {
+public class FinalProject3 {
     public static void main(String[] Args) throws Exception {
+        
+        File file = new File("clientInfo.txt");
+        File file2 = new File("ShowList.txt");
+        try {
+    			FileWriter initializeWriter = new FileWriter(file);
+          FileWriter initializeWriter2 = new FileWriter(file2);
+    		}
+    		catch (IOException e) {
+    
+				}
         
         // Create scanner
         Scanner input = new Scanner(System.in);
@@ -30,19 +40,34 @@ public class Finalproject2 {
             System.out.println("8: Report: List of Shows");
             System.out.println("9: Exit");
             System.out.print("Enter a choice: ");
+            while(!input.hasNextInt()) {
+                input.next();
+                System.out.print("Error: enter only numeric values: ");
+            }
             menuSelect = input.nextInt();
+            input.nextLine();
             
             // Switch statement to process menu selection
                 switch (menuSelect) {
                    
                     // add client
-                    case 1: System.out.println("\nEnter the new client's info");
+                    case 1: String regex = "[0-9]+";
+                            String phone;
+                            System.out.println("\nEnter the new client's info");
                             System.out.print("First name: ");
                             String firstName = input.next();
+                            input.nextLine();
                             System.out.print("Last name: ");
                             String lastName = input.next();
+                            input.nextLine();
+                            
+                            do {
                             System.out.print("Phone number (no dashes or spaces): ");
-                            String phone = input.next();
+                            phone = input.nextLine();
+                            if (!phone.matches(regex)) {
+                                System.out.println("Error: Phone number must only contain numbers.");
+                            }
+                            } while (!phone.matches(regex));
                             System.out.print("Email address: ");
                             String Eaddress = input.next();
                             
@@ -85,10 +110,19 @@ public class Finalproject2 {
                         String Pdate = "", Bdate = "";
                         System.out.print("Show title (format: sample_text): ");
                         String title = input.next();
+                        input.nextLine();
                         
-                        while (choice != 1 && choice != 2 && choice != 3) {
+                        boolean bError = true;
+                        while (bError || choice != 1 && choice != 2 && choice != 3) {
                             System.out.print("\nMagic \t(1)\nComedy \t(2)\nBand \t(3) \nEnter a type number: ");
+                            if (input.hasNextInt()) {
                             choice = input.nextInt();
+                            }
+                            else {
+                                input.next();
+                                continue;
+                            }
+                            bError = false;
                             
                         } 
                         switch (choice) {
@@ -101,6 +135,8 @@ public class Finalproject2 {
                             case 3:
                                 type = "Band";
                                 break;
+                            default:
+                            		System.out.println("Error");
                         }
                         do {
                         System.out.print("Performance Date (MM/DD/YYYY): ");
@@ -116,18 +152,32 @@ public class Finalproject2 {
                         formatCheck = Pdate.matches("\\d{2}/\\d{2}/\\d{4}");
                         } while (!formatCheck);
                         System.out.print("Fee: ");
-                        double fee = input.nextDouble();
-                        System.out.print("Client: ");
+                        
+                        boolean feeError = true;
+                        double fee = 0;
+                        while (feeError) {
+                            
+                                if (input.hasNextDouble()) {
+                                fee = input.nextDouble();
+                            }
+                            else {
+                                input.next();
+                                System.out.print("Error: enter a numeric value: ");
+                                continue;
+                            }
+                            feeError = false;
+                        }
+                        System.out.print("Client last name: ");
                         String showClient = input.next();
                         //input.nextLine();
-                        System.out.print("Street and Number: ");
+                        System.out.print("Street and Number (no spaces): ");
                         String address = input.next();
                         System.out.print("City: ");
                         String city = input.next();
                         System.out.print("State: ");
                         String state = input.next();
                         System.out.print("Zip: ");
-                        int zip = input.nextInt();
+                        String zip = input.next();
                         
                         Show show1 = new Show(title, type, Pdate, Bdate, showClient, address, city, state, fee, zip);
                         show1.addShow();
@@ -151,6 +201,19 @@ public class Finalproject2 {
                             Clients client4 = new Clients();
                             client4.ClientList();
                             break;
+                            
+                    case 8:
+                    		Show show4 = new Show();
+                        show4.showReport();
+                        break;
+                        
+                    case 9:
+                    		System.out.println("Logging off...");
+                        break;
+                        
+                    default:
+                    		System.out.println("Error: Enter a valid number");
+                        break;
                 }
             
         } while (menuSelect != 9);
@@ -165,7 +228,7 @@ public class Finalproject2 {
 
 class Clients {
     
-    // Delcare class variables and create file
+    // Delcare class variables
     File file = new File("clientInfo.txt");
     String firstName;
     String lastName;
@@ -193,10 +256,33 @@ class Clients {
         try (Scanner read = new Scanner(file)){
             
             // Read through the whole file to check for matching email or phone
+            int arrayMatchLine = -1;
+            int lineNum = 0;
             while (read.hasNextLine()) {
                 String line = read.nextLine();
+                lineNum++;
                 
                 if ((line.toLowerCase().contains(phone.toLowerCase())) || (line.toLowerCase().contains(address.toLowerCase()))) {
+                    arrayMatchLine = lineNum;
+                }
+            }
+            
+            // Read file into array
+            Scanner arrayRead = new Scanner(file);
+            String[][] array = new String[lineNum][4];
+            
+            for (int row = 0; row < array.length; row++) {
+                for (int column = 0; column < array[row].length; column++) {
+                    if (arrayRead.hasNextLine())
+                    array[row][column] = arrayRead.next();
+                }
+            }
+        
+        
+            // specifically check 
+            if(arrayMatchLine != -1) {
+                if (phone.matches(array[arrayMatchLine - 1][2]) || phone.matches(array[arrayMatchLine - 1][3])) {
+                    
                     foundLine = true;
                 }
             }
@@ -218,6 +304,8 @@ class Clients {
         else {
             System.out.println("Error: A client with that address or phone # already exists.");
         }
+        
+    
     }
     
     boolean updateClient(String id) {
@@ -482,7 +570,10 @@ class Clients {
                 System.out.print(array[row][column] + " ");
                 }
             }
-            System.out.println("");
+            System.out.println("\n" + lineNum + " clients total.\n-------------------\t");
+            
+            Date date = new Date();
+            System.out.println("Report Date: " + date + "\n"); //2016/11/16 12:08:43
         }
         
         catch (FileNotFoundException e) {
@@ -494,9 +585,8 @@ class Clients {
 
 class Show {
     File file = new File("ShowList.txt");
-    String title, type, Pdate, Bdate, client, address, city, state;
+    String title, type, Pdate, Bdate, client, address, city, state, zip;
     double fee;
-    int zip;
     
     //no-arg constructor
     Show() {
@@ -509,11 +599,11 @@ class Show {
         city = "";
         state = "";
         fee = 0;
-        zip = 0;
+        zip = "";
     }
     
     //add show constructor
-    Show(String title, String type, String Pdate, String Bdate, String client, String address, String city, String state, double fee, int zip) {
+    Show(String title, String type, String Pdate, String Bdate, String client, String address, String city, String state, double fee, String zip) {
         this.title = title;
         this.type = type;
         this.Pdate = Pdate;
@@ -668,6 +758,9 @@ class Show {
                         case 3:
                             type = "Band";
                             break;
+                        default:
+                        		System.out.println("Enter a number 1-3");
+                            break;
                     }
                     
                     array[arrayUpdateLine - 1][selection - 1] = type;
@@ -727,7 +820,7 @@ class Show {
                     System.out.print("State: ");
                     this.state = input.next();
                     System.out.print("Zip: ");
-                    this.zip = input.nextInt();
+                    this.zip = input.next();
                     String stringZip = ("" + this.zip);
 
                     array[arrayUpdateLine - 1][6] = this.address;
@@ -735,6 +828,10 @@ class Show {
                     array[arrayUpdateLine - 1][8] = this.state;
                     array[arrayUpdateLine - 1][9] = stringZip;
                     
+                    break;
+                
+                default:
+                		System.out.println("Error");
                     break;
             }
                 
@@ -833,15 +930,6 @@ class Show {
                 
                 // Prints the new array
                 System.out.println("\n");
-                /*for (int row = 0; row < newArray.length; row++) {
-                    for (int column = 0; column < newArray[row].length; column++) {
-                if (column == 9) {
-                    System.out.println(newArray[row][column]);
-                    }
-                else 
-                System.out.print(newArray[row][column] + " ");
-                    }
-                }*/
                 
                 BufferedWriter writer = new BufferedWriter(new FileWriter(file));
                 for (int row = 0; row < newArray.length - 1; row++) {
@@ -859,6 +947,74 @@ class Show {
         }
         catch (IOException e) {
             System.out.println("Error: IO Exception");
+        }
+    }
+    
+    void showReport() {
+        Scanner input = new Scanner(System.in);
+        int numberOfShows = 0;
+        double feeSum = 0;
+        
+        //Reads in the file (could possibly make this a method to shorten code)
+        try {
+            Scanner read = new Scanner(file);
+            int lineNum = 0;
+            while (read.hasNextLine()) {
+                String line = read.nextLine();
+                lineNum++;
+            }
+        
+            Scanner arrayRead = new Scanner(file);
+            String[][] array = new String[lineNum][10];
+            
+            for (int row = 0; row < array.length; row++) {
+                for (int column = 0; column < array[row].length; column++) {
+                    if (arrayRead.hasNextLine())
+                    array[row][column] = arrayRead.next();
+                }
+            }
+            
+            //prompts user to enter month and year and prints header
+            System.out.print("Enter the month for the report (MM): ");
+            int month = input.nextInt();
+            if (month > 12 || month <= 0) {
+                System.out.print("Invalid month please try again.\nEnter the month for the report: ");
+                month = input.nextInt();
+            }
+            System.out.print("Enter the year for the report (YYYY): ");
+            int year = input.nextInt();
+            if (year <= 0) {
+                System.out.print("Invalid year please try again.\nEnter the year for the report: ");
+                year = input.nextInt();
+            }
+            
+            System.out.println("\n-------------------------");
+            System.out.println("-\tShow Report\t-");
+            System.out.println("-------------------------\n");
+            
+            //converts the dates in the array to integers and compares them to the inputed dates then prints the report
+            for (int row = 0; row < array.length; row++) {
+                int tempMonth = Integer.parseInt(array[row][2].substring(0, array[row][2].indexOf('/')));
+                int tempYear = Integer.parseInt(array[row][2].substring(6,10));
+                
+                if (month == tempMonth && year == tempYear) {
+                    System.out.println(array[row][0] + " " + array[row][5] + " " + array[row][1] + " " + array[row][2] + " " + array[row][4]);
+                    numberOfShows++;
+                    double tempFee = Double.parseDouble(array[row][4]);
+                    feeSum += tempFee;
+                }
+            }
+            System.out.println("Total Shows for Month: " + numberOfShows);
+            System.out.println("Total Fees for Month: $" + feeSum);
+            
+            Date date = new Date();
+            System.out.println("Report Date: " + date + "\n"); //2016/11/16 12:08:43
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("Error: File not found...");
+        }
+        catch (InputMismatchException e) {
+            System.out.println("Error: Input Mismatch. Enter a number only");
         }
     }
 }
