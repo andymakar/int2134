@@ -148,6 +148,7 @@ public class FinalProjectFinishedVersion {
                                 break;
                             default:
                             		System.out.println("Error");
+					break;
                         }
                         
                         // Force user to use the specified format for booking date and performance date
@@ -288,8 +289,9 @@ class Clients {
             
             for (int row = 0; row < array.length; row++) {
                 for (int column = 0; column < array[row].length; column++) {
-                    if (arrayRead.hasNextLine())
+                    if (arrayRead.hasNextLine()) {
                     array[row][column] = arrayRead.next();
+		    }
                 }
             }
         
