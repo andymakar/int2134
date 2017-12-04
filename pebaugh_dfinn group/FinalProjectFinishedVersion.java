@@ -893,7 +893,8 @@ class Show {
     }
     
     public void deleteShow() throws IOException, FileNotFoundException {
-        int arrayDeleteLine = -1, choice = 0;
+        int arrayDeleteLine = -1;
+        int choice = 0;
         Scanner input = new Scanner (System.in);
         boolean validNumber = false;
         
