@@ -245,10 +245,10 @@ class Clients {
     
     // Delcare class variables
     File file = new File("clientInfo.txt");
-    String firstName;
-    String lastName;
-    String phone;
-    String address;
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private String address;
     
     // No-arg constructor
     Clients() {
@@ -598,7 +598,7 @@ class Clients {
 
 class Show {
     File file = new File("ShowList.txt");
-    String title, type, Pdate, Bdate, client, address, city, state, zip;
+    private String title, type, Pdate, Bdate, client, address, city, state, zip;
     double fee;
     
     //no-arg constructor
