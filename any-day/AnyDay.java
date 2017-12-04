@@ -5,7 +5,6 @@ Program Description: My implementation of Zellers Congruence
 Source Algorithm: https://en.wikipedia.org/wiki/Zeller%27s_congruence
 */
 
-package anyday;
 
 import java.util.*;
 

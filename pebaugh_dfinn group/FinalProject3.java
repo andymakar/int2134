@@ -13,8 +13,8 @@ public class FinalProject3 {
         File file = new File("clientInfo.txt");
         File file2 = new File("ShowList.txt");
         try {
-    			FileWriter initializeWriter = new FileWriter(file);
-          FileWriter initializeWriter2 = new FileWriter(file2);
+            FileWriter initializeWriter = new FileWriter(file);
+            FileWriter initializeWriter2 = new FileWriter(file2);
     		}
     		catch (IOException e) {
     

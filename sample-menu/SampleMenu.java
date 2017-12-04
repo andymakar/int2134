@@ -37,7 +37,6 @@ public class SampleMenu {
                 break;
                 default:
                 System.out.println("Please select a valid choice");
-				break;
             }
             
         } while (menuChoice != 'Q');

@@ -8,7 +8,8 @@ public class HelloClass {
   public static void main(String[] args) {
     
     System.out.println("INT2134 Class Roster: ");
-	System.out.println("Dr. Andrew J Makar - Adjunct Professor");
+	System.out.println("Dr. Andrew Makar - Adjunct Professor");
+   System.out.println("Peter Ebaugh - Student");
 
   }
 }
