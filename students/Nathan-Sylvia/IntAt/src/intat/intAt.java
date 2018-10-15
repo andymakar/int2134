@@ -4,7 +4,7 @@
  * 10-15-18
 */ 
 package intat;
-public class IntAt {
+public class intAt {
     public static int intAt(String number, int n) {
         //seperate the character that you want
         char charEnd = number.charAt(n);
