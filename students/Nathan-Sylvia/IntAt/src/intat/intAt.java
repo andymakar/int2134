@@ -1,6 +1,6 @@
 /*
  * Nathan Sylvia 
- * Class: IntAt
+ * Class: intAt
  * 10-15-18
 */ 
 package intat;
