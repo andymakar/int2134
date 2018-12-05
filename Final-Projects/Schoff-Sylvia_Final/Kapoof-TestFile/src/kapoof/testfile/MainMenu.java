@@ -13,6 +13,7 @@ import java.util.*;
 public class MainMenu {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        int i = 0;
         Client[] listOfClients = new Client[10];
         Show[] listOfShows = new Show[10];
         Client client = new Client();
@@ -22,7 +23,10 @@ public class MainMenu {
         while (selection != 9){
             System.out.println("___________________________________________\nPlease enter a selection:\n1) Add a client\n2) Update a client\n3) Delete a client\n4) Add a show\n5) Update a show\n6) Delete a show\n7) Report list of clients\n8) Report list of shows for the month\n9) Exit\n___________________________________________");
             switch(selection){
-                case 1: System.out.println("Case 1");
+                case 1: System.out.println("Please input the client's first name, last name, phone number, address and email; int that order: ");
+                    i++;
+                    listOfClients[i] = new Client(input.next(), input.next(), input.next(), input.next(), input.next());
+                    System.out.println(listOfClients[i]);
                     break;
                 case 2: System.out.println("Case 2");
                     break;
