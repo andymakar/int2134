@@ -1,4 +1,4 @@
-// Zachary Schoff
+// Zachary S. & Nathan S.
 // 12 - 4 - 2018
 // INT - 2134
 // Client class that handles clients and all their attributes
