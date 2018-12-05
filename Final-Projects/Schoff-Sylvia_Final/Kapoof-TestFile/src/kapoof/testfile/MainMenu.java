@@ -16,8 +16,10 @@ public class MainMenu {
         int i = 0;
         Client[] listOfClients = new Client[10];
         Show[] listOfShows = new Show[10];
+        //CHANGE WHEN WE ARE DONE WITH CODE
         Client client = new Client();
         Show show = new Show();
+        //CHANGE WHEN WE ARE DONE WITH CODE
         System.out.println("___________________________________________\nPlease enter a selection:\n1) Add a client\n2) Update a client\n3) Delete a client\n4) Add a show\n5) Update a show\n6) Delete a show\n7) Report list of clients\n8) Report list of shows for the month\n9) Exit\n___________________________________________");
         int selection = input.nextInt();
         while (selection != 9){
