@@ -53,7 +53,7 @@ public class Client {
         return count;
     }
     public String toString(){
-        return "_________________________\nFirst name: " + this.firstName + "\nLast name: " + this.lastName + "\nPhone number: " + this.phoneNumber + "\nAddress: " + this.address + "\n_________________________\n";
+        return "_________________________\nFirst name: " + this.firstName + "\nLast name: " + this.lastName + "\nPhone number: " + this.phoneNumber + "\nAddress: " + this.address + "\nEmail: " + this.email + "\nCount: " + count + "\n_________________________\n";
     }
     
 }
