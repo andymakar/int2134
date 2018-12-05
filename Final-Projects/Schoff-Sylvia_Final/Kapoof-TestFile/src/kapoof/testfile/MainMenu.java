@@ -2,7 +2,7 @@
 // 12 - 4 - 2018
 // INT - 2134
 // Main menu for the Kapoof Client and Show Manager
-package mainmenu;
+package kapoof.testfile;
 import java.util.*;
 public class MainMenu {
     public static void main(String[] args) {
