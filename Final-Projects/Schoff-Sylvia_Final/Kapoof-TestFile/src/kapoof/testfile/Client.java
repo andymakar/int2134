@@ -2,7 +2,7 @@
 // 12 - 4 - 2018
 // INT - 2134
 // Client class that handles clients and all their attributes
-package mainmenu;
+package kapoof.testfile;
 public class Client {
     private String firstName = "DEFAULT CLIENT FIRST NAME";
     private String lastName = "DEFAULT CLIENT LAST NAME";
