@@ -17,6 +17,7 @@ public class Show {
     private int fee;
     private String client;
     private String location;
+    private int count = 0;
     //Constructor
     Show() {
         this.title = "Unknown";
@@ -35,6 +36,7 @@ public class Show {
         this.fee = fee;
         this.client = client;
         this.location = location;
+        count = count++;
     }
     //Mutators and accesors
     public String getTitle() {
@@ -84,4 +86,19 @@ public class Show {
     public void setLocation(String location) {
         this.location = location;
     }
+    public int getCount() {
+        return count;
+    }
 }
+
+
+/* 
+    public void addStudent(String student) { 
+        if (numberOfStudents >= students.length) {
+            String[] stud = new String[students.length * 2];
+            System.arraycopy(students, 0, stud, 0, students.length);
+            students = stud;
+        }
+        students[numberOfStudents++] = student;
+    }
+    */
