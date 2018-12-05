@@ -17,6 +17,7 @@ public class Show {
     private int fee;
     private String client;
     private String location;
+    //Constructor
     Show() {
         this.title = "Unknown";
         this.type = 0;
@@ -35,15 +36,52 @@ public class Show {
         this.client = client;
         this.location = location;
     }
-    public void dropStudent(String student, int i) { 
-        if (student.equalsIgnoreCase(students[i])) {
-            students[i] = null; // sets dropped student's value to null
-            numberOfStudents--;
-            while (i < numberOfStudents) {
-                students[i] = students[i + 1];
-                i++;
-            }
-            }
+    //Mutators and accesors
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public String getType() {
+        switch(type) {
+            case 1: return "Magic";
+            case 2: return "Comedian";
+            case 3: return "Rock";
+            default: return "Unknown";
         }
+    }
+    public void setType(int type) {
+        this.type = type;
+    }
+    public String getPerformanceDate() {
+        return performanceDate;
+    }
+    public void setPerformanceDate(String performanceDate) {
+        this.performanceDate = performanceDate;
+    }
+    public String getBookingDate() {
+        return bookingDate;
+    }
+    public void setBookingDate(String bookingDate) {
+        this.bookingDate = bookingDate;
+    }
+    public int getFee() {
+        return fee;
+    }
+    public void setFee(int fee) {
+        this.fee = fee;
+    }
+    public String getClient() {
+        return client;
+    }
+    public void setClient(String client) {
+        this.client = client;
+    }
+    public String getLocation() {
+        return location;
+    }
+    public void setLocation(String location) {
+        this.location = location;
     }
 }
