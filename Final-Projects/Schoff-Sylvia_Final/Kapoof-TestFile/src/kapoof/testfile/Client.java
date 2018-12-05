@@ -17,7 +17,7 @@ public class Client {
         this.phoneNumber = newPhoneNumber;
         this.address = newAddress;
         this.email = newEmail;
-        count = count++;
+        count++;
     }
     public void setFirstName(String newFirstName){
         this.firstName = newFirstName;

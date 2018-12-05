@@ -20,13 +20,16 @@ public class MainMenu {
         while (selection != 9){
             System.out.println("___________________________________________\nPlease enter a selection:\n1) Add a client\n2) Update a client\n3) Delete a client\n4) Add a show\n5) Update a show\n6) Delete a show\n7) Report list of clients\n8) Report list of shows for the month\n9) Exit\n___________________________________________");
             switch(selection){
-                case 1: System.out.println("Please input the client's first name, last name, phone number, address and email; int that order: ");
+                case 1: System.out.println("Please input the client's first name, last name, phone number, address and email; in that order,\nseparated by one blank space: ");
                     listOfClients[listOfClients[0].getCount()] = new Client(input.next(), input.next(), input.next(), input.next(), input.next());
                     System.out.println(listOfClients[0].getCount());
                     break;
-                case 2: System.out.println("Case 2");
+                case 2: System.out.println("Please enter the client's current or former email address: ");
+                    
+                    System.out.println("Please input the updated client's first name, last name, phone number, address and email; in that order,\nseparated by one blank space: ");
                     break;
-                case 3: System.out.println("Case 3");
+                case 3: System.out.println("Please enter the email address of the client you wish to remove from the system: ");
+                    
                     break;
                 case 4: System.out.println("Case 4");
                     break;
