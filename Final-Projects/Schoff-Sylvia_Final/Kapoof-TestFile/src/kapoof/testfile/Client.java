@@ -15,6 +15,7 @@ public class Client {
         this.firstName = newFirstName;
         this.lastName = newLastName;
         this.phoneNumber = newPhoneNumber;
+        this.address = newAddress;
         this.email = newEmail;
         count = count++;
     }
