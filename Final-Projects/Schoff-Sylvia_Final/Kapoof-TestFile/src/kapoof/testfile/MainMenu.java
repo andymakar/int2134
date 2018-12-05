@@ -9,6 +9,7 @@ public class MainMenu {
         Scanner input = new Scanner(System.in);
         Client[] listOfClients = new Client[10];
         Show[] listOfShows = new Show[10];
+        Show show = new Show();
         System.out.println("___________________________________________\nPlease enter a selection:\n1) Add a client\n2) Update a client\n3) Delete a client\n4) Add a show\n5) Update a show\n6) Delete a show\n7) Report list of clients\n8) Report list of shows for the month\n9) Exit\n___________________________________________");
         int selection = input.nextInt();
         while (selection != 9){
@@ -34,6 +35,16 @@ public class MainMenu {
                     break;
             }
             selection = input.nextInt();
+        }
+        if (show.getCount() >= listOfShows.length) {
+            Show[] replaceList = new Show[listOfShows.length * 2];
+            System.arraycopy(listOfShows, 0, replaceList, 0, listOfShows.length);
+            listOfShows = replaceList;
+        }
+        if (show.getCount() >= listOfClients.length) {
+            Client[] replaceList = new Client[listOfClients.length * 2];
+            System.arraycopy(listOfClients, 0, replaceList, 0, listOfClients.length);
+            listOfClients = replaceList;
         }
     }
 }

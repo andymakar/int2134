@@ -27,6 +27,7 @@ public class Show {
         this.fee = 0;
         this.client = "Unknown";
         this.location = "Unknown";
+        count = count++;
     }
     Show(String title, int type, String performanceDate, String bookingDate, int fee, String client, String location) {
         this.title = title;
@@ -90,15 +91,3 @@ public class Show {
         return count;
     }
 }
-
-
-/* 
-    public void addStudent(String student) { 
-        if (numberOfStudents >= students.length) {
-            String[] stud = new String[students.length * 2];
-            System.arraycopy(students, 0, stud, 0, students.length);
-            students = stud;
-        }
-        students[numberOfStudents++] = student;
-    }
-    */
