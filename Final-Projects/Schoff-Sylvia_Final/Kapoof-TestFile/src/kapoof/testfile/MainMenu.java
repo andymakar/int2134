@@ -47,7 +47,7 @@ public class MainMenu {
             System.arraycopy(listOfShows, 0, replaceList, 0, listOfShows.length);
             listOfShows = replaceList;
         }
-        if (show.getCount() >= listOfClients.length) {
+        if (client .getCount() >= listOfClients.length) {
             Client[] replaceList = new Client[listOfClients.length * 2];
             System.arraycopy(listOfClients, 0, replaceList, 0, listOfClients.length);
             listOfClients = replaceList;
