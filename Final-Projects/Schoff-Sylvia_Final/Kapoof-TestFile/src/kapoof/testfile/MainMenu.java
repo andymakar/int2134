@@ -25,6 +25,7 @@ public class MainMenu {
                 case 1:  System.out.println("Please enter the client's first name, last name, phone number, address and email; in that order,\nseparated by one blank space: ");
                     listOfClients[countC - 1] = new Client(input.next(), input.next(), input.next(), input.next(), input.next());
                     System.out.println(listOfClients[countC]);
+                    countC++;
                     break;
                 case 2: System.out.println("Please enter the client's current or former email address: ");
                     for(int i = 0; i < listOfClients.length; i++){
@@ -49,6 +50,7 @@ public class MainMenu {
                 case 4: System.out.println("Please enter the show's title, type (1 for Magic shows, 2 for Comedic shows, 3 for Rock Shows), date of the show,\nthe booking date of the show, the fee charged, the client's first name\nand the location of the show; in that order, separated by one blank space: ");
                     listOfShows[countS - 1] = new Show(input.next(), input.nextInt(), input.next(), input.next(), input.nextDouble(), input.next(), input.next());
                     System.out.println(listOfShows[countS - 1]);
+                    countS++;
                     break;
                 case 5: System.out.println("Please enter the title of the show you wish to update: ");
                     for(int i = 0; i < listOfShows.length; i++){
@@ -66,6 +68,7 @@ public class MainMenu {
                     break;
                 case 6: System.out.println("Please enter the title of the show you wish to remove from the system: ");
                     
+                    countS--;
                     break;
                 case 7: System.out.println("The full Report of all clients can be found in a file called .");
                     
