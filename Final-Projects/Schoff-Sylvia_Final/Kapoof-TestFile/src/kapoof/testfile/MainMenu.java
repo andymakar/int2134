@@ -47,7 +47,7 @@ public class MainMenu {
                 case 8: System.out.println("The full Report of all the shows for the month can be found in a file called .");
                     
                     break;
-                case 9: 
+                case 9: System.out.println("Closing...");
                     break;
             }
             selection = input.nextInt();
