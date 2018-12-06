@@ -31,11 +31,11 @@ public class MainMenu {
                 case 3: System.out.println("Please enter the email address of the client you wish to remove from the system: ");
                     
                     break;
-                case 4: System.out.println("Case 4");
+                case 4: System.out.println("Please enter the shows Title, Type (1 = Magic, 2 = Comedian, 3 = Rock), Performance date, Booking date, Fee, Client, and Location in that order with a space seperating each item:");
                     break;
-                case 5: System.out.println("Case 5");
+                case 5: System.out.println("Please enter the Title for the show you would like to update: ");
                     break;
-                case 6: System.out.println("Case 6");
+                case 6: System.out.println("Please enter the title of the show you would liketo remove: ");
                     break;
                 case 7: System.out.println("Case 7");
                     break;
