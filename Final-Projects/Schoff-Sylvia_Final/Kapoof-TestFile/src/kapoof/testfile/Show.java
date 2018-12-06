@@ -90,4 +90,7 @@ public class Show {
     public int getCount() {
         return count;
     }
+    public String toString() {
+        return "_________________________\nTitle: " + title + "\nType: " + getType() + "\nPerformance Date: " + performanceDate + "\nBooking Date: " + bookingDate + "\nFee: " + fee + "\nClient: " + client + "\nLocation: " + location + "\n_________________________\n";
+    }
 }
