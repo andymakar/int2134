@@ -46,12 +46,14 @@ public class MainMenu {
                     
                     break;
                 case 3: System.out.println("Please enter the email address of the client you wish to remove from the system: ");
+                    String email = input.next();
                     for(int i = 0; i < listOfClients.length; i++){
-                        if(input.next().equals(listOfClients[i].getEmail())){
+                        if(email.equals(listOfClients[i].getEmail())){
                             listOfClients[i] = listOfClients[i + 1];
-                            while (i < listOfClients.length) {
-                                i++;
+                            i++;
+                            while (i < listOfClients.length - 1) {
                                 listOfClients[i] = listOfClients[i + 1];
+                                i++;
                             }
                         }
                     }
@@ -77,12 +79,14 @@ public class MainMenu {
                     }
                     break;
                 case 6: System.out.println("Please enter the title of the show you wish to remove from the system: ");
+                    String title = input.next();
                     for(int i = 0; i < listOfShows.length; i++){
-                        if(input.next().equals(listOfShows[i].getTitle())){
+                        if(title.equals(listOfShows[i].getTitle())){
                             listOfShows[i] = listOfShows[i + 1];
-                            while (i < listOfShows.length) {
-                                i++;
+                            i++;
+                            while (i < listOfShows.length - 1) {
                                 listOfShows[i] = listOfShows[i + 1];
+                                i++;
                             }
                         }
                     }

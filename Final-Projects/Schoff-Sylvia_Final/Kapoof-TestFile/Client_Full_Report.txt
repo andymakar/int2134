@@ -15,14 +15,6 @@ Email: 2
 _________________________
 
 _________________________
-First name: 3
-Last name: 3
-Phone number: 3
-Address: 3
-Email: 3
-_________________________
-
-_________________________
 First name: 4
 Last name: 4
 Phone number: 4
