@@ -24,7 +24,7 @@ public class MainMenu {
         switch(selection){
                 case 1:  System.out.println("Please enter the client's first name, last name, phone number, address and email; in that order,\nseparated by one blank space: ");
                     listOfClients[countC - 1] = new Client(input.next(), input.next(), input.next(), input.next(), input.next());
-                    System.out.println(listOfClients[countC]);
+                    System.out.println(listOfClients[countC - 1]);
                     countC++;
                     break;
                 case 2: System.out.println("Please enter the client's current or former email address: ");
