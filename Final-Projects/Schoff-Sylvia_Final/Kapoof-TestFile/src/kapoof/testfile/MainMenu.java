@@ -52,16 +52,16 @@ public class MainMenu {
                     break;
             }
             selection = input.nextInt();
-        }
-        if (listOfShows[0].getCount() >= listOfShows.length) {
+            if (listOfShows[0].getCount() >= listOfShows.length) {
             Show[] replaceList = new Show[listOfShows.length * 2];
             System.arraycopy(listOfShows, 0, replaceList, 0, listOfShows.length);
             listOfShows = replaceList;
-        }
-        if (listOfClients[0].getCount() >= listOfClients.length) {
-            Client[] replaceList = new Client[listOfClients.length * 2];
-            System.arraycopy(listOfClients, 0, replaceList, 0, listOfClients.length);
-            listOfClients = replaceList;
+            }
+            if (listOfClients[0].getCount() >= listOfClients.length) {
+                Client[] replaceList = new Client[listOfClients.length * 2];
+                System.arraycopy(listOfClients, 0, replaceList, 0, listOfClients.length);
+                listOfClients = replaceList;
+            }
         }
     }
 }
