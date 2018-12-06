@@ -48,7 +48,7 @@ public class MainMenu {
                     
                     break;
                 case 9: System.out.println("Closing...");
-                    System.exit(1);
+                    System.exit(0);
                     break;
             }
             selection = input.nextInt();
