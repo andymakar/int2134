@@ -19,9 +19,9 @@ public class MainMenu {
         int countS = 1;
         int selection = 0;
         while (selection < 10){
-        System.out.println("___________________________________________\nPlease enter a selection:\n1) Add a client\n2) Update a client\n3) Delete a client\n4) Add a show\n5) Update a show\n6) Delete a show\n7) Report list of clients\n8) Report list of shows for the month\n9) Exit\n___________________________________________");
-        selection = input.nextInt();
-        switch(selection){
+            System.out.println("___________________________________________\nPlease enter a selection:\n1) Add a client\n2) Update a client\n3) Delete a client\n4) Add a show\n5) Update a show\n6) Delete a show\n7) Report list of clients\n8) Report list of shows for the month\n9) Exit\n___________________________________________");
+            selection = input.nextInt();
+            switch(selection){
                 case 1:  System.out.println("Please enter the client's first name, last name, phone number, address and email; in that order,\nseparated by one blank space: ");
                     listOfClients[countC - 1] = new Client(input.next(), input.next(), input.next(), input.next(), input.next());
                     System.out.println(listOfClients[countC - 1]);
