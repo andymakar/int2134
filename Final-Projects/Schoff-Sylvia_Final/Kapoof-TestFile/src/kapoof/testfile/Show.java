@@ -17,7 +17,6 @@ public class Show {
     private double fee;
     private String client;
     private String location;
-    private int count = 0;
     //Constructor
     Show() {
         this.title = "Unknown";
@@ -27,7 +26,6 @@ public class Show {
         this.fee = 0;
         this.client = "Unknown";
         this.location = "Unknown";
-        count = count++;
     }
     Show(String title, int type, String performanceDate, String bookingDate, double fee, String client, String location) {
         this.title = title;
@@ -37,7 +35,6 @@ public class Show {
         this.fee = fee;
         this.client = client;
         this.location = location;
-        count = count++;
     }
     //Mutators and accesors
     public String getTitle() {
@@ -86,8 +83,5 @@ public class Show {
     }
     public void setLocation(String location) {
         this.location = location;
-    }
-    public int getCount() {
-        return count;
     }
 }
