@@ -72,7 +72,7 @@ public class Show {
     public double getFee() {
         return fee;
     }
-    public void setFee(int fee) {
+    public void setFee(double fee) {
         this.fee = fee;
     }
     public String getClient() {
