@@ -31,8 +31,12 @@ public class MainMenu {
                 case 3: System.out.println("Please enter the email address of the client you wish to remove from the system: ");
                     
                     break;
+<<<<<<< HEAD
                 case 4: System.out.println("Please enter the show's title, type (1 for Magic shows, 2 for Comedic shows, 3 for Rock Shows), date of the show,\nthe booking date of the show, the fee charged, the client's first name\nand the location of the show; in that order, separated by one blank space: ");
                     
+=======
+                case 4: System.out.println("Case 4");
+>>>>>>> parent of 6943beb... Update MainMenu.java
                     break;
                 case 5: System.out.println("Please enter the title of the show you wish to update: ");
                     
