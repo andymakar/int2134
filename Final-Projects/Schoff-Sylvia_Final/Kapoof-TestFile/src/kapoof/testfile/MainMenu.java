@@ -15,16 +15,16 @@ public class MainMenu {
         Scanner input = new Scanner(System.in);
         Client[] listOfClients = new Client[10];
         Show[] listOfShows = new Show[10];
-        int countC = 1;
-        int countS = 1;
-        int selection;
-        while (true){
+        int countC = 0;
+        int countS = 0;
+        System.out.println("___________________________________________\nPlease enter a selection:\n1) Add a client\n2) Update a client\n3) Delete a client\n4) Add a show\n5) Update a show\n6) Delete a show\n7) Report list of clients\n8) Report list of shows for the month\n9) Exit\n___________________________________________");
+        int selection = input.nextInt();
+        while (selection < 10){
             System.out.println("___________________________________________\nPlease enter a selection:\n1) Add a client\n2) Update a client\n3) Delete a client\n4) Add a show\n5) Update a show\n6) Delete a show\n7) Report list of clients\n8) Report list of shows for the month\n9) Exit\n___________________________________________");
-            selection = input.nextInt();
             switch(selection){
                 case 1: System.out.println("Please enter the client's first name, last name, phone number, address and email; in that order,\nseparated by one blank space: ");
-                    listOfClients[countC - 1] = new Client(input.next(), input.next(), input.next(), input.next(), input.next());
-                    System.out.println(listOfClients[countC - 1]);
+                    listOfClients[countC] = new Client(input.next(), input.next(), input.next(), input.next(), input.next());
+                    System.out.println(listOfClients[countC]);
                     countC++;
                     break;
                 case 2: System.out.println("Please enter the client's current or former email address: ");
@@ -35,7 +35,7 @@ public class MainMenu {
                     
                     break;
                 case 4: System.out.println("Please enter the show's title, type (1 for Magic shows, 2 for Comedic shows, 3 for Rock Shows), date of the show,\nthe booking date of the show, the fee charged, the client's first name\nand the location of the show; in that order, separated by one blank space: ");
-                    listOfShows[countS - 1] = new Show(input.next(), input.nextInt(), input.next(), input.next(), input.nextDouble(), input.next(), input.next());
+                    listOfShows[countS] = new Show(input.next(), input.nextInt(), input.next(), input.next(), input.nextDouble(), input.next(), input.next());
                     break;
                 case 5: System.out.println("Please enter the title of the show you wish to update: ");
                     
@@ -54,12 +54,13 @@ public class MainMenu {
                     System.exit(0);
                     break;
             }
-            if (countS >= listOfShows.length) {
+            selection = input.nextInt();
+            if (listOfShows[0].getCount() >= listOfShows.length) {
             Show[] replaceList = new Show[listOfShows.length * 2];
             System.arraycopy(listOfShows, 0, replaceList, 0, listOfShows.length);
             listOfShows = replaceList;
             }
-            if (countC >= listOfClients.length) {
+            if (listOfClients[0].getCount() >= listOfClients.length) {
                 Client[] replaceList = new Client[listOfClients.length * 2];
                 System.arraycopy(listOfClients, 0, replaceList, 0, listOfClients.length);
                 listOfClients = replaceList;

@@ -9,6 +9,7 @@ public class Client {
     private String phoneNumber = "123 456 7890";
     private String address = "1234 DEFAULT STREET";
     private String email = "defaultemailaddress@gmail.com";
+    private int count = 0;
     Client(){}
     Client(String newFirstName, String newLastName, String newPhoneNumber, String newAddress, String newEmail){
         this.firstName = newFirstName;
@@ -16,6 +17,7 @@ public class Client {
         this.phoneNumber = newPhoneNumber;
         this.address = newAddress;
         this.email = newEmail;
+        count++;
     }
     public void setFirstName(String newFirstName){
         this.firstName = newFirstName;
@@ -47,8 +49,11 @@ public class Client {
     public String getEmail(){
         return this.email;
     }
+    public int getCount() {
+        return count;
+    }
     public String toString(){
-        return "_________________________\nFirst name: " + this.firstName + "\nLast name: " + this.lastName + "\nPhone number: " + this.phoneNumber + "\nAddress: " + this.address + "\nEmail: " + this.email + "\n_________________________\n";
+        return "_________________________\nFirst name: " + this.firstName + "\nLast name: " + this.lastName + "\nPhone number: " + this.phoneNumber + "\nAddress: " + this.address + "\nEmail: " + this.email + "\nCount: " + count + "\n_________________________\n";
     }
     
 }
