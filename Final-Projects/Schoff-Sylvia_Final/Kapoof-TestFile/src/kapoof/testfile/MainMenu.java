@@ -36,7 +36,10 @@ public class MainMenu {
                             listOfClients[i].setPhoneNumber(input.next());
                             listOfClients[i].setAddress(input.next());
                             listOfClients[i].setEmail(input.next());
+                            break;
                         }
+                        else 
+                            System.out.println("Email not found");
                     }
                     
                     break;
