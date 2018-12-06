@@ -10,8 +10,11 @@
 */
 package kapoof.testfile;
 import java.util.*;
+import java.io.*;
 public class MainMenu {
     public static void main(String[] args) {
+        String fileC = "Client_Full_Report.txt";
+        String fileS = "Show_Full_Report.txt";  
         Scanner input = new Scanner(System.in);
         Client[] listOfClients = new Client[1];
         Show[] listOfShows = new Show[1];
@@ -86,11 +89,25 @@ public class MainMenu {
                     }
                     countS--;
                     break;
-                case 7: System.out.println("The full Report of all clients can be found in a file called .");
-                    
+                case 7: System.out.println("The full Report of all clients can be found in a file called " + fileC + ".");
+                    WriteFile writeC = new WriteFile(fileC);
+                    for(int i = 0; i < listOfClients.length; i++) {
+                        try {
+                            writeC.writeToFile(listOfClients[i]);
+                        } catch(IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
                     break;
-                case 8: System.out.println("The full Report of all the shows for the month can be found in a file called .");
-                           
+                case 8: System.out.println("The full Report of all the shows for the month can be found in a file called " + fileS + "."); 
+                    WriteFile writeS = new WriteFile(fileS);
+                    for(int i = 0; i < listOfShows.length; i++) {
+                        try {
+                            writeS.writeToFile(listOfShows[i]);
+                        } catch(IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
                     break;
                 case 9: System.out.println("Closing...");
                     System.exit(0);
@@ -107,5 +124,29 @@ public class MainMenu {
                 listOfClients = replaceList;
             }
         }
+    }
+}
+//This Exists becuase I hate myself
+class WriteFile {
+    private String path;
+    private boolean append_to_file = false;
+    public WriteFile(String filePath) {
+        path = filePath;
+    }
+    public WriteFile(String filePath, boolean appendFile) {
+        path = filePath;
+        append_to_file = appendFile;
+    }
+    public void writeToFile(Client textLine) throws IOException {
+        FileWriter write = new FileWriter(path, append_to_file);
+        PrintWriter printLine = new PrintWriter(write);
+        printLine.printf("%s" + "%n", textLine);
+        printLine.close();
+    }
+    public void writeToFile(Show textLine) throws IOException {
+        FileWriter write = new FileWriter(path, append_to_file);
+        PrintWriter printLine = new PrintWriter(write);
+        printLine.printf("%s" + "%n", textLine);
+        printLine.close();
     }
 }
