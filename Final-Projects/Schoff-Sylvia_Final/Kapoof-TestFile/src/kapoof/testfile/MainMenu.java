@@ -13,8 +13,6 @@ import java.util.*;
 import java.io.*;
 public class MainMenu {
     public static void main(String[] args) {
-        String fileC = "Client_Full_Report.txt";
-        String fileS = "Show_Full_Report.txt";  
         Scanner input = new Scanner(System.in);
         Client[] listOfClients = new Client[1];
         Show[] listOfShows = new Show[1];
@@ -89,25 +87,22 @@ public class MainMenu {
                     }
                     countS--;
                     break;
-                case 7: System.out.println("The full Report of all clients can be found in a file called " + fileC + ".");
-                    WriteFile writeC = new WriteFile(fileC);
-                    for(int i = 0; i < listOfClients.length; i++) {
-                        try {
-                            writeC.writeToFile(listOfClients[i]);
-                        } catch(IOException e) {
-                            e.printStackTrace();
-                        }
+                case 7: System.out.println("The full Report of all clients can be found in a file called Client_Full_Report.txt.");
+                    CreateFile fileC = new CreateFile();
+                    fileC.openFile("Client_Full_Report.txt");
+                    for(int i = 0; i < countC - 1; i++) {
+                         fileC.addRecord(listOfClients[i]);   
                     }
+                    fileC.closeFile();
                     break;
-                case 8: System.out.println("The full Report of all the shows for the month can be found in a file called " + fileS + "."); 
-                    WriteFile writeS = new WriteFile(fileS);
-                    for(int i = 0; i < listOfShows.length; i++) {
-                        try {
-                            writeS.writeToFile(listOfShows[i]);
-                        } catch(IOException e) {
-                            e.printStackTrace();
-                        }
+                case 8: System.out.println("The full Report of all the shows for the month can be found in a file called Show_Full_Report.txt."); 
+                    CreateFile fileS = new CreateFile();
+                    System.getProperty( "line.separator");
+                    fileS.openFile("Show_Full_Report.txt");
+                    for(int i = 0; i < countS - 1; i++) {
+                        fileS.addRecord(listOfShows[i]);
                     }
+                    fileS.closeFile();
                     break;
                 case 9: System.out.println("Closing...");
                     System.exit(0);
@@ -126,27 +121,28 @@ public class MainMenu {
         }
     }
 }
-//This Exists becuase I hate myself
-class WriteFile {
-    private String path;
-    private boolean append_to_file = false;
-    public WriteFile(String filePath) {
-        path = filePath;
+
+
+
+
+
+//Please let me write to this file
+class CreateFile {
+    private Formatter x;
+    public void openFile(String file) {
+        try{
+            x = new Formatter(file);
+        } catch (Exception e) {
+            System.out.println("You have an error");
+        }
     }
-    public WriteFile(String filePath, boolean appendFile) {
-        path = filePath;
-        append_to_file = appendFile;
+    public void addRecord(Client type) {
+        x.format("%-12s%n", type);
     }
-    public void writeToFile(Client textLine) throws IOException {
-        FileWriter write = new FileWriter(path, append_to_file);
-        PrintWriter printLine = new PrintWriter(write);
-        printLine.printf("%s" + "%n", textLine);
-        printLine.close();
+    public void addRecord(Show type) {
+        x.format("%-12s%n", type);
     }
-    public void writeToFile(Show textLine) throws IOException {
-        FileWriter write = new FileWriter(path, append_to_file);
-        PrintWriter printLine = new PrintWriter(write);
-        printLine.printf("%s" + "%n", textLine);
-        printLine.close();
+    public void closeFile() {
+        x.close();
     }
 }
