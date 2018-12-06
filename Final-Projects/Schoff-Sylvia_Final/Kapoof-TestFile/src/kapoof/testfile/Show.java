@@ -14,7 +14,7 @@ public class Show {
         public final static int ROCK = 3;
     private String performanceDate;
     private String bookingDate;
-    private int fee;
+    private double fee;
     private String client;
     private String location;
     private int count = 0;
@@ -29,7 +29,7 @@ public class Show {
         this.location = "Unknown";
         count = count++;
     }
-    Show(String title, int type, String performanceDate, String bookingDate, int fee, String client, String location) {
+    Show(String title, int type, String performanceDate, String bookingDate, double fee, String client, String location) {
         this.title = title;
         this.type = type;
         this.performanceDate = performanceDate;
@@ -69,7 +69,7 @@ public class Show {
     public void setBookingDate(String bookingDate) {
         this.bookingDate = bookingDate;
     }
-    public int getFee() {
+    public double getFee() {
         return fee;
     }
     public void setFee(int fee) {
