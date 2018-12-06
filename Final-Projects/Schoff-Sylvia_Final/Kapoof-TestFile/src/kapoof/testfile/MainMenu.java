@@ -80,12 +80,12 @@ public class MainMenu {
                     System.exit(0);
                     break;
             }
-            if (listOfShows[0].getCount() >= listOfShows.length) {
+            if (countS >= listOfShows.length) {
             Show[] replaceList = new Show[listOfShows.length * 2];
             System.arraycopy(listOfShows, 0, replaceList, 0, listOfShows.length);
             listOfShows = replaceList;
             }
-            if (listOfClients[0].getCount() >= listOfClients.length) {
+            if (countC >= listOfClients.length) {
                 Client[] replaceList = new Client[listOfClients.length * 2];
                 System.arraycopy(listOfClients, 0, replaceList, 0, listOfClients.length);
                 listOfClients = replaceList;

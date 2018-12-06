@@ -35,7 +35,6 @@ public class Show {
         this.fee = fee;
         this.client = client;
         this.location = location;
-        count = count++;
     }
     //Mutators and accesors
     public String getTitle() {
