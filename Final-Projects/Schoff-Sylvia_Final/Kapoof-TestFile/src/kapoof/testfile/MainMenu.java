@@ -47,7 +47,13 @@ public class MainMenu {
                     for(int i = 0; i < listOfShows.length; i++){
                         if(input.next().equals(listOfShows[i].getTitle())){
                             System.out.println("Please enter the updated title of the show, type (1 for Magic shows, 2 for Comedic shows, 3 for Rock Shows), date of the show,\nthe booking date of the show, the fee charged, the client's first name\nand the location of the show; in that order, separated by one blank space: ");
-                            
+                            listOfShows[i].setTitle(input.next());
+                            listOfShows[i].setType(input.nextInt());
+                            listOfShows[i].setPerformanceDate(input.next());
+                            listOfShows[i].setBookingDate(input.next());
+                            listOfShows[i].setFee(input.nextDouble());
+                            listOfShows[i].setClient(input.next());
+                            listOfShows[i].setLocation(input.next());
                         }
                     }
                     break;
@@ -58,7 +64,7 @@ public class MainMenu {
                     
                     break;
                 case 8: System.out.println("The full Report of all the shows for the month can be found in a file called .");
-                    
+                           
                     break;
                 case 9: System.out.println("Closing...");
                     System.exit(0);
