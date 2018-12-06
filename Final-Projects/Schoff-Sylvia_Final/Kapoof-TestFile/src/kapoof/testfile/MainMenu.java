@@ -34,15 +34,20 @@ public class MainMenu {
                 case 4: System.out.println("Please enter the show's title, type (1 for Magic shows, 2 for Comedic shows, 3 for Rock Shows), date of the show,\nthe booking date of the show, the fee charged, the client's first name\nand the location of the show; in that order, separated by one blank space: ");
                     
                     break;
-                case 5: System.out.println("Case 5");
+                case 5: System.out.println("Please enter the title of the show you wish to update: ");
+                    
+                    System.out.println("Please enter the updated title of the show, type (1 for Magic shows, 2 for Comedic shows, 3 for Rock Shows), date of the show,\nthe booking date of the show, the fee charged, the client's first name\nand the location of the show; in that order, separated by one blank space: ");
                     break;
-                case 6: System.out.println("Case 6");
+                case 6: System.out.println("Please enter the title of the show you wish to remove from the system: ");
+                    
                     break;
-                case 7: System.out.println("Case 7");
+                case 7: System.out.println("The full Report of all clients can be found in a file called .");
+                    
                     break;
-                case 8: System.out.println("Case 8");
+                case 8: System.out.println("The full Report of all the shows for the month can be found in a file called .");
+                    
                     break;
-                case 9: System.out.println("Case 9");
+                case 9: 
                     break;
             }
             selection = input.nextInt();
