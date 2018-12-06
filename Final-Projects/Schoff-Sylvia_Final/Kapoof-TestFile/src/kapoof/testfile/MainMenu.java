@@ -20,7 +20,7 @@ public class MainMenu {
         while (selection != 9){
             System.out.println("___________________________________________\nPlease enter a selection:\n1) Add a client\n2) Update a client\n3) Delete a client\n4) Add a show\n5) Update a show\n6) Delete a show\n7) Report list of clients\n8) Report list of shows for the month\n9) Exit\n___________________________________________");
             switch(selection){
-                case 1: System.out.println("Please input the client's first name, last name, phone number, address and email; in that order,\nseparated by one blank space: ");
+                case 1: System.out.println("Please enter the client's first name, last name, phone number, address and email; in that order,\nseparated by one blank space: ");
                     listOfClients[listOfClients[0].getCount()] = new Client(input.next(), input.next(), input.next(), input.next(), input.next());
                     System.out.println(listOfClients[0].getCount());
                     break;
@@ -31,7 +31,7 @@ public class MainMenu {
                 case 3: System.out.println("Please enter the email address of the client you wish to remove from the system: ");
                     
                     break;
-                case 4: System.out.println("Case 4");
+                case 4: System.out.println("Please enter the show's title, type (1 for Magic shows, 2 for Comedic shows, 3 for Rock Shows), date of the show,\nthe booking date of the show, the fee charged, the client's email address\nand the location of the show; in that order, separated by one blank space: ");
                     break;
                 case 5: System.out.println("Case 5");
                     break;
