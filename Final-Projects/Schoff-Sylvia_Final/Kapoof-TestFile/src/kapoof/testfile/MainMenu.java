@@ -13,6 +13,7 @@ import java.util.*;
 import java.io.*;
 public class MainMenu {
     public static void main(String[] args) {
+        System.lineSeparator();
         Scanner input = new Scanner(System.in);
         Client[] listOfClients = new Client[1];
         Show[] listOfShows = new Show[1];

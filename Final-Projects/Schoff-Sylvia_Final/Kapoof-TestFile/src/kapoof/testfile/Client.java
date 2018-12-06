@@ -48,7 +48,7 @@ public class Client {
         return this.email;
     }
     public String toString(){
-        return "_________________________\nFirst name: " + this.firstName + "\nLast name: " + this.lastName + "\nPhone number: " + this.phoneNumber + "\nAddress: " + this.address + "\nEmail: " + this.email + "\n_________________________\n";
+        return "_________________________\r\nFirst name: " + this.firstName + "\r\nLast name: " + this.lastName + "\r\nPhone number: " + this.phoneNumber + "\r\nAddress: " + this.address + "\r\nEmail: " + this.email + "\r\n_________________________\r\n";
     }
     
 }

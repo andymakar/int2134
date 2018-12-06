@@ -84,4 +84,7 @@ public class Show {
     public void setLocation(String location) {
         this.location = location;
     }
+    public String toString() {
+        return "_________________________\r\nTitle: " + title + "\r\nType: " + getType() + "\r\nPerformance Date: " + performanceDate + "\r\nBooking Date: " + bookingDate + "\r\nFee: " + fee + "\r\nClient: " + client + "\r\nLocation: " + location + "\r\n_________________________\r\n";
+    }
 }
