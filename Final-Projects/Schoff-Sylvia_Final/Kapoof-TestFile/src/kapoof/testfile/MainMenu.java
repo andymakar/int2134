@@ -59,19 +59,17 @@ public class MainMenu {
                     }
                     countC--;
                     break;
-                case 4: System.out.println("Please enter the show's title, type (1 for Magic shows, 2 for Comedic shows, 3 for Rock Shows), date of the show,\nthe booking date of the show, the fee charged, the client's first name\nand the location of the show; in that order, separated by one blank space: ");
-                    listOfShows[countS - 1] = new Show(input.next(), input.nextInt(), input.next(), input.next(), input.nextDouble(), input.next(), input.next());
+                case 4: System.out.println("Please enter the show's title, type (1 for Magic shows, 2 for Comedic shows, 3 for Rock Shows), That date of the show (MM/DD/YYYY), the fee charged, the client's first name\nand the location of the show; in that order, separated by one blank space: ");
+                    listOfShows[countS - 1] = new Show(input.next(), input.nextInt(), input.next(), input.nextDouble(), input.next(), input.next());
                     System.out.println(listOfShows[countS - 1]);
                     countS++;
                     break;
                 case 5: System.out.println("Please enter the title of the show you wish to update: ");
                     for(int i = 0; i < listOfShows.length; i++){
                         if(input.next().equals(listOfShows[i].getTitle())){
-                            System.out.println("Please enter the updated title of the show, type (1 for Magic shows, 2 for Comedic shows, 3 for Rock Shows), date of the show,\nthe booking date of the show, the fee charged, the client's first name\nand the location of the show; in that order, separated by one blank space: ");
+                            System.out.println("Please enter the updated title of the show, type (1 for Magic shows, 2 for Comedic shows, 3 for Rock Shows), The Month, Day, and Year of the show,\n the fee charged, the client's first name\nand the location of the show; in that order, separated by one blank space: ");
                             listOfShows[i].setTitle(input.next());
                             listOfShows[i].setType(input.nextInt());
-                            listOfShows[i].setPerformanceDate(input.next());
-                            listOfShows[i].setBookingDate(input.next());
                             listOfShows[i].setFee(input.nextDouble());
                             listOfShows[i].setClient(input.next());
                             listOfShows[i].setLocation(input.next());
@@ -100,12 +98,16 @@ public class MainMenu {
                     }
                     fileC.closeFile();
                     break;
-                case 8: System.out.println("The full Report of all the shows for the month can be found in a file called Show_Full_Report.txt."); 
+                case 8: System.out.println("Please input the year and month of the shows you would like in the report. Said report can be fount in the file called Show_Mont_Report.txt.");
+                    String year = input.next();
+                    String month = input.next();
                     CreateFile fileS = new CreateFile();
                     System.getProperty( "line.separator");
-                    fileS.openFile("Show_Full_Report.txt");
-                    for(int i = 0; i < countS - 1; i++) {
-                        fileS.addRecord(listOfShows[i]);
+                    fileS.openFile("Show_Month_Report.txt");
+                    for(int i = 0; i < countS-1; i++){
+                        if((year.equals(listOfShows[i].getPerformanceYear()) && (month.equals(listOfShows[i].getPerformanceMonth()))) ){
+                            fileS.addRecord(listOfShows[i]);
+                        }
                     }
                     fileS.closeFile();
                     break;
@@ -146,4 +148,5 @@ class CreateFile {
     public void closeFile() {
         x.close();
     }
+}
 }
