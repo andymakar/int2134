@@ -127,10 +127,6 @@ public class MainMenu {
     }
 }
 
-
-
-
-
 //Please let me write to this file
 class CreateFile {
     private Formatter x;
