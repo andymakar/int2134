@@ -282,7 +282,6 @@ public class Show {
                 }
                 writer.write(currentLine + System.getProperty("line.separator"));
             }
-            inputFile.delete();
             if(inputFile.delete()){
                tempFile.renameTo(inputFile);
             }

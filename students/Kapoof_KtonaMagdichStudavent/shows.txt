@@ -1,3 +1,0 @@
-show_title,show_type,show_performance_date,show_booking_date,show_fee,show_client,show_address,
-Lenny and the Ducks,Rock Band,12/12/1990,11/11/1989,$5555.0,Telemarketer,Some palace somewhere,
-Ansem,Comedian Show,12/12/1990,11/11/1989,$400.0,Sora,D.I.,
