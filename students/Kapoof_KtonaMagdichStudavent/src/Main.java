@@ -1,12 +1,10 @@
-package adamktona;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.Scanner;
 
 /*
-* Name: Adam Ktona, Deshawn Studavent
+* Name: Adam Ktona, Tyler Magdich, Deshawn Studavent
 * Description: The main class of the program. Displays the main menu in a loop and calls the other classes' methods for each function
 */
 public class Main {

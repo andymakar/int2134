@@ -1,9 +1,7 @@
-package adamktona;
-
 import java.util.InputMismatchException;
 
 /*
-* Name: Adam Ktona
+* Name: Adam Ktona, Tyler Magdich, Deshawn Studavent
 * Description: Helpful methods to simplify code
 */
 public class Libraries {
