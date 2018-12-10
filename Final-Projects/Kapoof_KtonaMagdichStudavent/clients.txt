@@ -1,4 +1,4 @@
-client_first_name,client_last_name,client_phone_number,client_email
+client_first_name,client_last_name,client_phone_number,client_email,
 Tyler,Magdich,2485086642,tmagdich@ltu.edu,
 Adam,Ktona,2488408578,aktona@ltu.edu,
 Jack,Johnson,5632121425,jackjohnson@gmail.com,
@@ -19,7 +19,3 @@ Maria,Valdez,2487949232,marlavaldex@gmail.com,
 Jon,Smith,3132221111,jonsmith@gmail.com,
 Roy,McHale,4444444444,roymchale@gmail.com,
 Staci,Johnson,4079678876,stacijohnson@gmail.com,
-
-
-
-
