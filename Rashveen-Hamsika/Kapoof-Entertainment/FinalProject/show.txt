@@ -1,0 +1,24 @@
+Comedy Nights by RashHam;Comedian Show;12-31-2018;Sun Dec 09 18:34:24 EST 2018;200.0;24749 Garter Street;Detroit;MI;48001;rashveenkaur@gmail.com;1544398443728
+Music Concert;Rock Band;12-15-2018;Sun Dec 09 18:41:16 EST 2018;300.0;232 Haggerty Road;Farmington Hills;MI;48335;rashveenkaur@gmail.com;1544398639659
+Flying Lady;Magic Show;12-31-2018;Sun Dec 09 18:43:48 EST 2018;100.0;Fifth Avenue Street;Novi;MI;48167;rkapoor@gmail.com;1544398939290
+Punk Rock Show;Rock Band;01-03-2019;Sun Dec 09 18:47:40 EST 2018;300.0;Wilson Street;Plymouth;MI;48170;nitika.jain@gmail.com;1544399156657
+Laughter Challenge;Comedian Show;01-27-2019;Sun Dec 09 18:55:10 EST 2018;200.0;Halsted Road;Plymouth;MI;48033;kirtisingh@gmail.com;1544399602926
+Rock Gem Show;Rock Band;12-27-2018;Sun Dec 09 19:07:27 EST 2018;300.0;Auburn Hills;Southfield;MI;48033;kirtisingh@gmail.com;1544400237966
+Mash Ups;Rock Band;01-7-2019;Sun Dec 09 19:11:23 EST 2018;300.0;696 Windsor Avenue;Novi;MI;48167;mohit.kathuria@gmail.com;1544400631760
+@midnight;Comedian Show;01-4-2019;Sun Dec 09 19:15:17 EST 2018;200.0;Center Street;Plymouth;MI;48170;ayeshabedi@gmail.com;1544400800314
+The Magic is Back;Magic Show;12-28-2018;Sun Dec 09 19:19:07 EST 2018;100.0;25 12 Mile Road;Southfield;MI;48033;raman.singh@gmail.com;1544401089772
+Best Stand-Up Comedian in the town;Comedian Show;05-17-2019;Sun Dec 09 19:23:00 EST 2018;200.0;58 Franklin Road;Dearborn;MI;48120;surindersharma@hotmail.com;1544401271615
+Punk Rock Festival;Rock Band;12-11-2018;Sun Dec 09 19:28:11 EST 2018;300.0;11 Woodword Street;Farmington Hills;MI;48335;john.smith@gmail.com;1544401543724
+Pop Rock and Jazz;Rock Band;12-29-2018;Sun Dec 09 19:30:31 EST 2018;300.0;56 Dequider Street;Southfield;MI;48033;erikalvarado@gmail.com;1544401758010
+The Magic Castle;Magic Show;12-15-2018;Sun Dec 09 19:33:31 EST 2018;100.0;88 Grove Drive;Livonia;MI;48150;vanita.corea@yahoo.com;1544401932868
+Trickery Magic;Magic Show;12-19-2018;Sun Dec 09 19:38:29 EST 2018;100.0;18 Halsted Road;Novi;MI;48167;smithkate@yahoo.com;1544402176748
+The Laugh Stub;Comedian Show;12-23-2018;Sun Dec 09 19:47:51 EST 2018;200.0;12 Mile Road;Auburn Hills;MI;48033;achalkapoor@gmail.com;1544402361921
+Red Rocks;Rock Band;01-17-2019;Sun Dec 09 19:51:36 EST 2018;300.0;9 Mile Road;Aauburn Hills;MI;48033;achalkapoor@gmail.com;1544403081758
+Hard Rock Live;Rock Band;12-26-2018;Sun Dec 09 19:53:15 EST 2018;300.0;Centre Mile Road;Plymouth;MI;48120;achalkapoor@gmail.com;1544403177515
+Rocksino;Rock Band;12-11-2018;Sun Dec 09 19:54:47 EST 2018;300.0;12 Woodstreet Grove;Livonia;MI;48150;heenakakkar@yahoo.com;1544403261290
+The Magic Penthouse;Magic Show;01-19-2019;Sun Dec 09 19:56:27 EST 2018;100.0;18 Hillstreet Road;Auburn Hills;MI;48033;nandinidesai@gmail.com;1544403347320
+The Magic Parlour;Magic Show;01-18-2019;Sun Dec 09 19:58:26 EST 2018;100.0;11 Nature Road;Southfield;MI;48033;asalecha@yahoo.com;1544403471070
+Go Comedy;Comedian Show;12-26-2018;Sun Dec 09 20:01:13 EST 2018;200.0;12 Hudson River Lane;Detroit;MI;48127;sunnychadha@hotmail.com;1544403584117
+New Year's Eve Live;Comedian Show;12-31-2018;Sun Dec 09 20:02:38 EST 2018;200.0;67 Grove Street;Dearborn;MI;48120;prernakalra@gmail.com;1544403721682
+Comedy Club Nights;Comedian Show;12-12-2018;Sun Dec 09 20:04:03 EST 2018;200.0;99 Forest Street;School Craft;MI;49087;kulmeet.k@hotmail.com;1544403809051
+The Magic History;Magic Show;12-18-2018;Sun Dec 09 20:06:18 EST 2018;100.0;77 Fifth Avenue Main;Auburn Hills;MI;48033;sonaljuneja@yahoo.com;1544403940256

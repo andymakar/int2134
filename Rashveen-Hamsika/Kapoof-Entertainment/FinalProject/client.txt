@@ -1,0 +1,21 @@
+Rashveen;Bhasin;248-946-6030;24748 Verdant Drive;Farmington Hills;MI;48335;rashveenkaur@gmail.com
+Rohit;Kapoor;248-946-6031;24722 Uphill Road;Novi;MI;48167;rkapoor@gmail.com
+Nitika;Jain;256-910-6100;249 Muirwood Apartments;Farmington Hills;MI;48335;nitika.jain@gmail.com
+Kirti;Singh;210-567-8787;324 Auburn Hills;Southfield;MI;48033;kirtisingh@gmail.com
+Mohit;Kathuria;324-789-1010;126 Windsor Street;Plymouth;MI;48170;mohit.kathuria@gmail.com
+Ayesha;Bedi;456-700-6234;Hill Street Road;School Craft;MI;49087;ayeshabedi@gmail.com
+Raman;Singh;567-908-3456;Townhall Avenue;Bloomfield;MI;48009;raman.singh@gmail.com
+Surinder;Sharma;789-675-2323;Wood Logs;Dearborn;MI;48120;surindersharma@hotmail.com
+John;Smith;532-898-0007;Hill Top Apartments;School Craft;MI;49087;john.smith@gmail.com
+Erik;Alvarado;675-898-5656;Main Street Drive;Novi;MI;48167;erikalvarado@gmail.com
+Emily;Mathews;567-676-823;Haggerty Road;Detroit;MI;48127;emily.mathews@hotmail.com
+Vanita;Corea;456-696-125;Windsor Street;Auburn Hills;MI;48033;vanita.corea@yahoo.com
+Smith;Kate;700-654-1010;Fifth Avenue;Livonia;MI;48150;smithkate@yahoo.com
+Achal;Kapoor;878-239-2351;Wilson Street;Farmington Hills;MI;48335;achalkapoor@gmail.com
+Heena;Kakkar;786-565-1020;Muirwood Apartments;Plymouth;MI;481770;heenakakkar@yahoo.com
+Nandini;Desai;676-567-2010;Bolston Road;Novi;MI;48167;nandinidesai@gmail.com
+Amanpreet;Salecha;676-565-2323;Hugo Drive;Southfield;MI;48033;asalecha@yahoo.com
+Sunny;Chadha;239-765-1313;12 Mile Road;Dearborn;MI;49087;sunnychadha@hotmail.com
+Prerna;Kalra;232-675-4545;10 Avenue Road;Livonia;MI;48150;prernakalra@gmail.com
+Kulmeet;Khurana;349-787-2452;Wallstreet Kingston;School Craft;MI;49087;kulmeet.k@hotmail.com
+Sonal;Juneja;565-786-1010;Natures Wood;Auburn Hills;MI;48033;sonaljuneja@yahoo.com
